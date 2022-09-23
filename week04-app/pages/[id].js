@@ -25,6 +25,11 @@ export async function getStaticPaths() {
 export default function dataEntry({dataItem}) {
   return (
     <Layout>
+      <header>
+        <nav>
+          <Link href="/">Home Page</Link>
+        </nav>
+      </header>
       <article className="card col-2 center">
         <div className="card-body">
           <h5 className="card-title">{dataItem.name}</h5>
