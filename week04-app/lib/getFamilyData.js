@@ -52,13 +52,13 @@ export async function getOneData(idRequest){
   if(objectFilter.length > 0) {
     objectReturn = objectFilter[0];
     const objectFilter2 = json2Object.filter(object => {
-      return object.related_persons.toString() === idRequest;
+      return object.person.toString() === idRequest;
     }
   );
   if (objectFilter2.length > 0) {
-    const objectFilter3 = jsonObject.filter(obj => {
+    const objectFilter3 = jsonObject.filter(object => {
         return objectFilter2[0].related_persons.includes( object.id );
-      }
+      },
     );
 
     if (objectFilter3.length > 0) {
@@ -69,6 +69,5 @@ export async function getOneData(idRequest){
   else {
     objectReturn = {};
   }
-
   return objectReturn;
 }
