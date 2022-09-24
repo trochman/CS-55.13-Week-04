@@ -1,15 +1,15 @@
+import React from 'react'
+import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import Home from '../pages/index'
-import '@testing-library/jest-dom'
 
 describe('Home', () => {
-  it('renders a heading', () => {
+  it('renders a list', () => {
     render(<Home />)
 
-    const heading = screen.getByRole('heading', {
-      name: /List of Heeler Family Members/i,
+    const list = screen.getByRole('list', {
     })
 
-    expect(heading).toBeInTheDocument()
+    expect(list).toBeInTheDocument()
   })
 })

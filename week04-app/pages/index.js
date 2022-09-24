@@ -14,19 +14,20 @@ export async function getStaticProps() {
   }
 }
 
+let id;
 export default function Home({allData}) {
   return (
       <Layout>
         <h1>List of Heeler Family Members</h1>
-        <div className="list-group col-2 center">
+        <ul className="list-group col-2 center">
           {allData ?
             allData.map(({ id, name }) => (
             <Link key={id} href={`/${id}`}>
               <a className="list-group-item list-group-item-action">{name}</a>
             </Link>
           ))
-        : null}
-        </div>
+          : null}
+        </ul>
       </Layout>
   );
 }
