@@ -1,7 +1,7 @@
 [
    {
     "person": 13,
-    "related_persons": [3],
+    "related_persons": [1, 2, 3],
     "id": 1
   },
   {
